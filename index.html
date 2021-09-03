@@ -1,18 +1,157 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <title>hungvht page</title>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        position: relative;
+    }
+
+    div.col-8 [class*=bg-] {
+        height: 500px;
+    }
+
+    .skills {
+        text-align: right;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+    }
+
+    .html {
+        width: 90%;
+        background-color: #4CAF50;
+    }
+
+    .css {
+        width: 80%;
+        background-color: #2196F3;
+    }
+
+    .js {
+        width: 65%;
+        background-color: #f44336;
+    }
+
+    .php {
+        width: 60%;
+        background-color: #808080;
+    }
+
+    .profile-contain{
+        padding: 20px;
+    }
+    </style>
 </head>
 
-<body>
-
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
-
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
-
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-sm-3 col-4">
+                <div class="card" style="width:100%;position: sticky; top: 1rem">
+                    <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar3.png" alt="image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">John Doe</h4>
+                        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                        <a href="javascript:void(0)" class="btn btn-primary">See Profile</a>
+                        <nav id="myScrollspy">
+                            <ul class="nav nav-pills flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#section1">ABOUT</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#section2">TIMELINE</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#section3">PRODUCTS</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="#section4">CONTACTS</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9 col-8">
+                <div class="profile-contain">
+                    <div id="section1" class="bg-success">
+                        ABOUT ME
+                        MY NAME IS HUNG
+                    </div>
+                    <div id="section2" class="bg-warning">
+                        <h1>My Skills</h1>
+                        <p>HTML</p>
+                        <div class="container">
+                            <div class="skills html">90%</div>
+                        </div>
+                        <p>CSS</p>
+                        <div class="container">
+                            <div class="skills css">80%</div>
+                        </div>
+                        <p>JavaScript</p>
+                        <div class="container">
+                            <div class="skills js">65%</div>
+                        </div>
+                        <p>PHP</p>
+                        <div class="container">
+                            <div class="skills php">60%</div>
+                        </div>
+                    </div>
+                    <div id="section3" class="bg-secondary">
+                        <h1>JOB</h1>
+                        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                        <div class="container mt-3">
+                            <h2>Toggleable Tabs</h2>
+                            <br>
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+                                </li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div id="home" class="container tab-pane active"><br>
+                                    <h3>HOME</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                                <div id="menu1" class="container tab-pane fade"><br>
+                                    <h3>Menu 1</h3>
+                                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                                <div id="menu2" class="container tab-pane fade"><br>
+                                    <h3>Menu 2</h3>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="section4" class="bg-danger">
+                        <h1>FORM</h1>
+                        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
